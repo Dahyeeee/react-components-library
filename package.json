@@ -1,6 +1,6 @@
 {
   "name": "@dahyeeee/react-components-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "@dahyeee's react-components-library for personal projects",
   "type": "module",
   "main": "dist/cjs/index.js",
