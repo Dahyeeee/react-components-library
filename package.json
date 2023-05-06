@@ -1,0 +1,44 @@
+{
+  "name": "@dahyeeee/react-components-library",
+  "version": "1.0.0",
+  "description": "@dahyeee's react-components-library for personal projects",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dahyeeee/react-components-library.git"
+  },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "author": "Dahyeeee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dahyeeee/react-components-library/issues"
+  },
+  "homepage": "https://github.com/Dahyeeee/react-components-library#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.21.5",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^5.0.4"
+  }
+}
