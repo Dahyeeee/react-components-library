@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { createPortal } from "react-dom";
-import "./Modal.css";
+import S from "./Modal.styles";
 
 interface ModalProps {
   isModalVisible: boolean;
@@ -18,8 +18,8 @@ const Modal = ({
     <>
       {isModalVisible && (
         <>
-          <div className="backdrop" onClick={closeModal} />
-          <div className={`modal-container ${$position}`}>{children}</div>
+          <S.Backdrop onClick={closeModal} />
+          <S.ModalContainer $position={$position}>{children}</S.ModalContainer>
         </>
       )}
     </>,
