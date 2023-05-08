@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const getCssByPosition = ($position: "top" | "bottom" | "middle") => {
+const getPositionCss = ($position: "top" | "bottom" | "middle") => {
   switch ($position) {
     case "top":
       return css`
@@ -31,22 +31,24 @@ const S = {
     background: rgba(0, 0, 0, 0.35);
   `,
 
-  ModalContainer: styled.div<{ $position: "top" | "bottom" | "middle" }>`
+  ModalContainer: styled.div<{
+    $backgroundColor: string;
+    $position: "top" | "bottom" | "middle";
+  }>`
     position: fixed;
-
     width: 100%;
-    height: 33%;
+    height: 40%;
 
     ${(props) =>
       css`
-        ${getCssByPosition(props.$position)}
-      `}
+        ${getPositionCss(props.$position)}
+      `};
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: white;
+    background-color: ${(props) => props.$backgroundColor};
   `,
 };
 

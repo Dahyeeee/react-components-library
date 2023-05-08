@@ -6,6 +6,7 @@ interface ModalProps {
   isModalVisible: boolean;
   closeModal?: () => void;
   $position?: "top" | "middle" | "bottom";
+  $backgroundColor?: string;
 }
 
 const Modal = ({
@@ -13,13 +14,19 @@ const Modal = ({
   isModalVisible,
   closeModal,
   $position = "bottom",
+  $backgroundColor = "white",
 }: PropsWithChildren<ModalProps>) => {
   return createPortal(
     <>
       {isModalVisible && (
         <>
           <S.Backdrop onClick={closeModal} />
-          <S.ModalContainer $position={$position}>{children}</S.ModalContainer>
+          <S.ModalContainer
+            $backgroundColor={$backgroundColor}
+            $position={$position}
+          >
+            {children}
+          </S.ModalContainer>
         </>
       )}
     </>,
