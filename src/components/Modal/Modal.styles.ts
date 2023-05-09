@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const getPositionCss = ($position: "top" | "bottom" | "middle") => {
   switch ($position) {
@@ -20,6 +20,17 @@ const getPositionCss = ($position: "top" | "bottom" | "middle") => {
       `;
   }
 };
+
+const showModal = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const S = {
   Backdrop: styled.div`
@@ -49,6 +60,7 @@ const S = {
     justify-content: center;
 
     background-color: ${(props) => props.$backgroundColor};
+    animation: ${showModal} 0.5s ease-in;
   `,
 };
 
